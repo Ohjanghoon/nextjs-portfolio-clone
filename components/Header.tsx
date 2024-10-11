@@ -1,8 +1,9 @@
-import Link from "next/link"
+import Link from "next/link";
 
 // components
-import Nav from "./Nav"
-import { Button } from "./ui/button"
+import Nav from "./Nav";
+import { Button } from "./ui/button";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
@@ -14,7 +15,7 @@ const Header = () => {
             Oh<span className="text-accent">.</span>
           </h1>
         </Link>
-        
+
         {/* desktop nav & hire me button */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
@@ -24,10 +25,12 @@ const Header = () => {
         </div>
 
         {/* mobile nav */}
-        <div className="xl:hidden">mobile nav</div>
+        <div className="xl:hidden">
+          <MobileNav />
+        </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
